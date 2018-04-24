@@ -8,9 +8,12 @@ import { IMovie } from './movie';
 export class MovieFilterPipe implements PipeTransform {
 
   transform(value: IMovie[], args: string[]): IMovie[] {
-    let filter: string = args[0] ? args[0].toLocaleLowerCase() : null;
+    if (!args) {
+      return value;
+    }
+    const filter: string = args[0] ? args[0].toLocaleLowerCase() : null;
     return filter ? value.filter((movie: IMovie) =>
-        movie.title.toLocaleLowerCase().indexOf(filter) != -1) : value;
-}
+      movie.Title.toLocaleLowerCase().indexOf(filter) !== -1) : value;
+  }
 
 }
