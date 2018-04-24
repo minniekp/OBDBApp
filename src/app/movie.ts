@@ -1,21 +1,21 @@
 export interface IMovie {
-    movieId: number;
-    title: string;
-    genre: string;
-    classification: string;
-    releaseDate: number;
-    rating: number;
-    cast: string[];
+  MovieId: number;
+  Title: string;
+  Genre: string;
+  Classification: string;
+  ReleaseDate: number;
+  Rating: number;
+  Cast: string[];
 
 }
 
 
 export class Movie implements IMovie {
-    movieId: number;
-    title: string;
-    genre: string;
-    classification: string;
-    releaseDate: number;
-    rating: number;
-    cast: string[];
+  MovieId: number;
+  Title: string;
+  Genre: string;
+  Classification: string;
+  ReleaseDate: number;
+  Rating: number;
+  Cast: string[];
 }
